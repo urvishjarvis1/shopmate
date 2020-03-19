@@ -1,0 +1,16 @@
+#main { padding:20px; }
+body { padding:0px; margin:0px; }
+#calc { height: 275px; width:350px; padding: 10px; box-sizing:border-box; border: 3px
+            solid black; }	
+#val1 { height: 25px; width:200px; }
+#val2 { height: 25px; width:200px; }
+#caption { text-align: center; }
+#ans { height: 26.5px; width:201.5px; border: 1px solid gray; position: relative; top:3px;
+            left:3px; }
+#display { height: 26.5px; width:201.5px; }
+#part1 { float:left; margin:0px; padding:0px; font-size:15px; }
+#part { float:left; margin:0px; padding:0px; }
+#add { position: relative; top:18px; left:45px; height:35px; width:35px; }
+#sub { position: relative; top:18px; left:45px; height:35px; width:35px; }
+#mul { position: relative; top:18px; left:45px; height:35px; width:35px; }
+#div { position: relative; top:18px; left:45px; height:35px; width:35px; }

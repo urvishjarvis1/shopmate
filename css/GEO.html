@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click Here For Your Co-ordinates: <button onclick="getLocation()">Get</button></p>
+<p id="demo"></p>
+<div id="mapholder" style="float:left;padding:20px;"></div><div id="map" style="float:left;padding:20px;"></div>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAhRUWW3AG5_bPHUcOZzRCnG7wUviFbIOA&libraries=places"></script>
+
+<script>
+var x = document.getElementById("demo"), map;
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {  x.innerHTML = "Geolocation is not supported by this browser."; }
+}
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false"; 
+	document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+    showPosition1();
+}
+function showPosition1() {
+    var latlon = 22.601399+","+72.834846;
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=20&size=400x300&sensor=false"; 
+document.getElementById("map").innerHTML = "<img src='"+img_url+"'>";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+<script type="text/javascript">
+
+	function Add()
+	{
+		var a = document.getElementById("val1");
+		var b = document.getElementById("val2");
+		document.getElementById("ans").innerHTML = parseInt(a.value) + parseInt(b.value) ;
+	}
+
+
+	function Sub()
+	{
+		var a = document.getElementById("val1");
+		var b = document.getElementById("val2");
+		document.getElementById("ans").innerHTML = parseInt(a.value) – parseInt(b.value);
+	}
+	function Mul()
+	{
+		var a = document.getElementById("val1");
+		var b = document.getElementById("val2");
+		document.getElementById("ans").innerHTML = parseInt(a.value) * parseInt(b.value);
+	}
+	function Div()
+	{
+		var a = document.getElementById("val1");
+		var b = document.getElementById("val2");
+		document.getElementById("ans").innerHTML = parseInt(a.value) / parseInt(b.value);
+	}
+</script>
+</head>
+<body>
+
+<div id="main">
+	<div id="calc">
+	<div id="caption"><b>CALCULATOR</b></div>
+	<div id="part">
+	<form>
+	<br><input type="text" id="val1" name="val1" placeholder="Enter First Number"><br><br>
+	<input type="text" id="val2" name="val2" placeholder="Enter Second Number"><br><br>
+	<div id="display"><b>Answer:</b></div>
+	<div id="ans"></div>
+</form>
+	</div>
+
+
+	<div id="part1">
+		<form>
+			<input type="button" id="add" value="+" onclick="Add()"><br><br>
+			<input type="button" id="sub" value="-" onclick="Sub()"><br><br>
+			<input type="button" id="mul" value="*" onclick="Mul()"><br><br>
+			<input type="button" id="div" value="/" onclick="Div()">
+		</form>
+	</div>
+	</div>
+</div>
+</body>
+</html>
